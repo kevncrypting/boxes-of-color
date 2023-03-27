@@ -1,0 +1,24 @@
+body {
+    font-size: 3rem;
+}
+
+button {
+    padding: 30px;
+    font-size: 2rem;
+}
+
+section {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.box {
+    background-color: black;
+    height: 250px;
+    width: 250px; 
+}
+
+
+
+/* on mouse click, make box turn to red */
