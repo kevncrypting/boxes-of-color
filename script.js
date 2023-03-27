@@ -1,14 +1,14 @@
 console.log(`linked up!`); // checks to make sure the javascript file is properly linked to html page, should display at top of console if linked
 
 // creates variables that will be used later
-let boxes = document.querySelectorAll(".box"); // contains all elements on the html page with a class of box 
-let color = 'red'; // contains a default color value of red stored as a string
-let colorButtons = document.querySelectorAll('section.colorButtons > button'); // contains all buttons that are children of the section element with a class called colorButtons
-let colorShow = document.querySelector('span'); // points to the span element
-let randomColorButton = document.getElementById('randomColor'); // points to the button with the ID randomColor
-let rgbValueArray = [0, 0, 0]; // contains a default array of 3 numbers to be used for random RGB value
+let boxes = document.querySelectorAll(".box"); // contains all elements on the html page with a class of box, stored in a variable called boxes
+let color = 'red'; // contains a default color value of red stored as a string, stored in a variable called color
+let colorButtons = document.querySelectorAll('section.colorButtons > button'); // contains all buttons that are children/DIRECT DESCENDANTS of the section element with a class called colorButtons, stored in a variable called colorButtons
+let colorShow = document.querySelector('span'); // points to the span element, stored in a variable called colorShow
+let randomColorButton = document.getElementById('randomColor'); // points to the button with the ID randomColor, stored in a variable called randomColorButton
+let rgbValueArray = [0, 0, 0]; // contains a default array of 3 numbers to be used for random RGB value, stored in a variable called rgbValueArray
 
-colorButtons.forEach(button => { // iterates over each button in the colorButtons "array"
+colorButtons.forEach(button => { // iterates over each button in the colorButtons "array" - this is in quotes because colorButtons is actually of type "NodeList", but acts similarly to an array in that it has some overlapping methods, no need for us to convert to an Array here
     button.addEventListener('click', function() { // adds an event listener to each button that executes the following function body on click event
         color = button.innerText; // sets color variable to inner text of button
         colorShow.innerHTML = `Current Color Selected: ${color}`; // displays the current color
@@ -17,7 +17,7 @@ colorButtons.forEach(button => { // iterates over each button in the colorButton
     })
 })
 
-boxes.forEach(box => { // iterates over each box in the boxes "array"
+boxes.forEach(box => { // iterates over each box in the boxes "array" - this is in quotes because colorButtons is actually of type "NodeList", but acts similarly to an array in that it has some overlapping methods, no need for us to convert to an Array here
     // adds an event listener to each box - on click event, assigns the current selected color to the box's background, and if the background is a color other than black, resets background color back to black using a ternary operator
     box.addEventListener('click', () => box.style.backgroundColor = box.style.backgroundColor === color ? 'black' : color)
 })
