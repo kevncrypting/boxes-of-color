@@ -11,22 +11,25 @@ let blueButton = document.getElementById('blueButton');
 // defines a global variable called colorTransition that controls what color the boxes will switch to when clicked
 let colorTransition = 'red'; 
 
-
 // creates 4 functions to change the global variable colorTransition to a different color
 function setColorRed() {
     colorTransition = 'red';
+    colorShow.innerHTML = `Current Color Selected: ${colorTransition}`
 }
 
 function setColorYellow() {
     colorTransition = 'yellow';
+    colorShow.innerHTML = `Current Color Selected: ${colorTransition}`
 }
 
 function setColorGreen() {
     colorTransition = 'green';
+    colorShow.innerHTML = `Current Color Selected: ${colorTransition}`
 }
 
 function setColorBlue() {
     colorTransition = 'blue';
+    colorShow.innerHTML = `Current Color Selected: ${colorTransition}`
 }
 
 // adds an event listener to each button that calls a function whose purpose is to change the global variable to the named color
@@ -39,3 +42,5 @@ blueButton.addEventListener('click', setColorBlue)
 boxes.forEach(box => {
     box.addEventListener('click', () => box.style.backgroundColor = box.style.backgroundColor === colorTransition ? 'black' : colorTransition)
 })
+
+let colorShow = document.querySelector('span');
