@@ -1,5 +1,8 @@
 body {
     font-size: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 button {
@@ -17,22 +20,6 @@ section {
     background-color: black;
     height: 250px;
     width: 250px; 
-}
-
-#redButton {
-    background-color: red;
-}
-
-#yellowButton {
-    background-color: yellow;
-}
-
-#greenButton {
-    background-color: green;
-}
-
-#blueButton {
-    background-color: blue;
 }
 
 /* on mouse click, make box turn to red */
