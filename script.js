@@ -35,3 +35,19 @@ randomColorButton.addEventListener('click', function() { // adds an event listen
     console.log(`The RGB value of the color you generated is ${color}`); // displays current color to console
     randomColorButton.style.backgroundColor = `${color}` // changes background of randomColorButton to the currently selected color
 })
+
+/* Example of event bubbling
+
+let section = document.querySelector('section');
+
+section.addEventListener('click', function(event) {
+    let childElements = Array.from(event.currentTarget.children);
+    console.log(childElements.indexOf(event.target));
+    event.target.addEventListener('mouseover', function() {
+        event.target.innerText = 'Registered a click from the parent';
+    };
+});
+
+Events propogate up from the child elements to the top of the document
+
+*/
